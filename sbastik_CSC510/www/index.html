@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- HEAD SECTION -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Know Your Calories!</title>
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--BOOTSTRAP MAIN STYLES -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/local.css" rel="stylesheet" />
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--CUSTOM STYLE -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- reference this *before* initializing -->
+<script type="text/javascript" src="js/libs.js"></script>
+		<style type="text/css">
+
+			text {
+				font-family: sans-serif;
+				font-size: 12px;
+				fill: white;
+			}
+
+		</style>
+    
+</head>
+    <!--END HEAD SECTION -->
+<body>   
+     <!-- NAV SECTION -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><h4 class="mystyle">KNOW YOUR CALORIES!</h4></a>
+		~Shreya Bastikar(sbastik)
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#header-section">Top {Junk Food at its WORST}</a></li>
+                    <li><a href="#about-section">Your Calories intake</a></li>
+                    <li><a href="#price-section">Gyms around the town</a></li>
+
+
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+     <!--END NAV SECTION -->
+     <!-- HEADER SECTION -->
+    <div id="header-section" >
+          <div class="container">
+        
+            <div class="row main-top-margin">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <div class="text-center">
+                      
+                          <i><img src="junkframe.PNG"/></i>
+                            <br />                            
+                       
+                    </div>
+                </div>
+            </div>
+                  <div class="row main-low-margin">
+                <div class="col-md-12">
+
+                    <div class="text-center">
+                        <h2 class="head-line" >&nbsp;&nbsp;&nbsp;KNOW YOUR CALORIES</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div> 
+      <!--END HEADER SECTION -->
+   
+     <!-- ABOUT SECTION -->
+      <div id="about-section" class="section" >
+        <div class="container" >
+          
+               
+            <div class="row main-low-margin">
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1" >
+                    <h1>Why bother about calories?</h1>
+                    <h5>
+                       See, whether or not you count them, the math remains true… Calories burned> Calories eaten = Weight loss. Calories are simply a measure of energy in a food. So not counting just means somehow the equation still needs to be balanced to see the results; either by watching what you eat or by burning more than you eat. The challenge of this is it is always a guessing game so you are forced to do what you THINK is enough.
+                    </h5>
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
+	
+    <div class="container"  >
+        <div class="row main-low-margin" >
+                <div class="col-md-6 col-sm-4" >
+		<script src="../site.js"></script>
+
+    <!-- fire off your app -->
+    <script>
+        $(function(){
+           var reportVM = new site();
+           ko.applyBindings(reportVM);
+        });
+    </script>
+	<h3><b><p>Let's check your calorie intake based on the food that you've had TODAY!</p></b></h3>
+		<p>Type in one of the following:-</p>
+		<p>1. Type <b>Green Leafy Vegetables</b> if you've had {Spinach, Lettuce, Broccoli, etc.}
+		<p>2. Type <b>Vegetables</b> if you've had {Okhra, Green beans, French beans, green peas, tomatoes, potatoes(Oops carbs!), etc.}
+		<p>3. Type <b>Pizza</b> if you've had {Pizza, Thin crust, Cheeseburst, etc.}
+		<p>4. Type <b>Burger</b> if you've had {Subway, Hamburger, Bean burger, etc.}
+		<p>5. Type <b>Fries</b> if you've had {French fries, Garlic fries, Potato chips, veggie chips, etc.}
+		<p>5. Type <b>Desserts</b> if you've had {Pastries, icecreams, chocolates, etc.}
+		<br/>
+		<h3><b><p>You have entered  <span data-bind='text: gifts().length'>&nbsp;</span> food item(s)</p></b></h3>	
+                    <div> 
+		       
+			<table>
+			    <thead>
+				<tr data-bind='visible: gifts().length > 0'>
+				    <th>Food item</th>
+				    <th>Quantity</th>
+				    <th></th>
+				</tr>
+			    </thead>
+			    <tbody data-bind='foreach: gifts'>
+				<tr>
+				    <td><input class='required' data-bind='value: gname' /></td>
+				    <td><input class='required' data-bind='value: price' /></td>
+				    <td><a href='#' data-bind='click: $root.removeGift'>Delete</a></td>
+				</tr>
+			    </tbody>
+			</table>
+		     
+			<button data-bind='click: addGift'>Add Food Item</button>
+			
+   
+    
+</div>
+                </div>               
+<div class="col-md-4 col-sm-4" ></div>
+                    <div class="col-md-6 col-sm-4" >
+                    <i class="fa fa-pencil fa-5x color-blue"></i>
+                    <h3 data-bind='visible: gifts().length > 0'>Calorie chart</h3><h2>
+                    
+			<table data-bind='foreach: gifts' border="2">
+			<tr><td><span data-bind="text: price"></span>&nbsp;&nbsp;&nbsp;<span data-bind="text: gname"></span>(s)</td><td><span data-bind="text: calculatedValue"></span></td></tr>
+			</table>
+			<br/>
+                        Total Calories: <span data-bind="text: totalCalories"> </span>!</h2>
+                    
+                </div>
+                
+            </div>
+    </div>
+
+ <p><center>The ideal intake of calories(Pie chart using <b>d3.js</b>) - <i>On a scale of 100%</i>:</center></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<script src="../calorie_piechart.js"></script></p>
+<center><table border="1"><tr><td><b><i><font color="#d62728">Green Leafy Vegetables</font></td><td>45</td></tr>
+<tr><td><b><i><font color="#8c564b">Vegetables</font></td><td>25</td></tr>
+<tr><td><b><i><font color="#2ca02c">Burger</font></td><td>20</td></tr>
+<tr><td><b><i><font color="#ff7f0e">Desserts</font></td><td>10</td></tr>
+<tr><td><b><i><font color="#9467bd">Fries</font></td><td>6</td></tr>
+<tr><td><b><i><font color="#1f77b4">Pizza</font></i></b></td><td>5</td></tr></table></center>
+    <div class="space-bottom"></div>
+        <!--END ABOUT SECTION -->
+     <!--PARALLAX SECTION ONE-->
+    <section id="story-freext">
+        <article>
+       
+                    <h3> <i class="fa fa-flask "></i>  Just a tip</h3>
+                   <span>
+                        An ideal diet must consist of green leafy vegetables...
+                        <br />
+                         -It has been scientifically proven that green leafy vegetables like spinach,lettuce, etc. burn the calories in our body. Make your diet complete with a green leaf decorating the dish atleast.
+                    </span>
+          
+        </article>
+        <div class="parallax" data-velocity="-.3" ></div>
+    </section>
+    <!-- END PARALLAX SECTION ONE -->
+
+
+    <!--GYM SECTION -->
+       <div id="price-section" class="section" >
+        <div class="container" >
+                         
+            <div class="row main-low-margin">
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1" >
+                    <div class="col-md-6">
+            <center><div>
+                <div class="panel panel-default">
+                    <div class="text-center header">One of the best gyms in Raleigh</div>
+                    <div class="panel-body text-center"><font color="black">
+                        <h4>Address</h4>
+                        <div>
+			Rapid Fitness-Glenwood Avenue<br/>
+			7101 Glenwood Ave<br/>
+			Raleigh, NC 27612<br/>
+			</font>
+                        </div>
+                        <hr />
+                        <div id="map1" class="map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        function init_map1() {
+            var myLocation_1 = new google.maps.LatLng(35.863179, -78.715449);
+            var myLocation_2 = new google.maps.LatLng(35.82004, -78.621418);
+            var myLocation_3 = new google.maps.LatLng(35.784569, -78.719987);
+            var mapOptions = {
+                center: myLocation_1,
+                zoom: 16
+            };
+            var marker = new google.maps.Marker({
+                position: myLocation_1,
+                title: "Rapid fitness Gym"
+            }
+
+);
+            var map = new google.maps.Map(document.getElementById("map1"),
+                mapOptions);
+            marker.setMap(map);
+        }
+        init_map1();
+    });
+</script>
+</center>
+<style>
+    .map {
+        min-width: 300px;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        background-color: #F5F5F5;
+        color: #36A0FF;
+        height: 70px;
+        font-size: 27px;
+        padding: 10px;
+    }
+</style>
+
+<!-- Contact with Map - END -->
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+   
+      
+      <!--FOOTER SECTION -->
+    
+      <div class="text-center"  id="footer" >
+               
+                      <a href="#"><i class="fa fa-facebook-square fa-3x color-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square fa-3x color-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus-square fa-3x color-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square fa-3x color-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-square fa-3x color-pinterest"></i></a>
+          <br /><br />
+         2014 www.yourdomain.com | All Right Reserved
+         
+            </div>
+         
+    <!--END FOOTER SECTION --> 
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY LIBRARY -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- CORE BOOTSTRAP LIBRARY -->
+    <script src="assets/js/bootstrap.min.js"></script>
+     <!-- PARALLAX SCRIPTS-->
+     <script src="assets/js/scrolly-master/jquery.scrolly.js"></script>
+       <!-- CUSTOM SCRIPT-->  
+    <script src="assets/js/custom.js"></script>
+    
+</body>
+</html>
